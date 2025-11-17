@@ -3,6 +3,7 @@ import { DarkModeToggle } from "@/components/common/darkmode-toggle";
 import { Separator } from "@/components/ui/separator";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { ReactNode } from "react";
+import DashboardBreadcrumb from "./_components/dashboard-breadcrumb";
 
 export default function DashboardLayout({children}: {children: ReactNode}) {
     return (
@@ -13,6 +14,8 @@ export default function DashboardLayout({children}: {children: ReactNode}) {
                     <div className="flex items-center gap-2 px-4">
                         <SidebarTrigger className="cursor-pointer"/>
                         <Separator orientation="vertical" className="mr-2 data-[orientation=vertical]:h-4"/>
+
+                        <DashboardBreadcrumb/>
                     </div>
 
                     <div className="px-4 ">
